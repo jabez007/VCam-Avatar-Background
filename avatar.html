@@ -10,16 +10,32 @@ html, body {
 body {
   background: url(background.svg);
   background-size: cover;
+  overflow: hidden;
 }
 
 .foreground {
+  animation: pulse 10s infinite linear; 
   background: url(aang.svg);
   background-size: cover;
   height: 100vh;
   position: absolute;
+  transform-origin: center 80vh;
   width: 100vw;
   z-index: 99;
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 .firefly {
   position: fixed;
